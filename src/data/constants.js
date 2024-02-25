@@ -229,12 +229,14 @@ export const diseases = [
       "What are the measures available in the market? What works and what might not work",
       "Surgical method for increasing the size and girth of penis",
     ],
+
     Description: [
       "Many claim to increase the penis size with a number of methods. Do they really work? The article makes an effort to throw light on how effective the methods are and the associated side effects.",
       "Concerns about penis size may arise even when it's within the normal range, leading to anxiety about satisfying a partner. A penis shorter than 3 inches erect is considered abnormal, termed as micropenis, while over 5 inches is typical. Variations exist, with some exceeding the norm and others falling short, contributing to individual perceptions of size adequacy.",
       "Penis enlargement motivations may stem from medical concerns like fertility or psychological factors affecting mental well-being. Genetic predispositions can result in small penises, leading to challenges in sexual activity and urine stream control.",
       "Certain marketed products promising penis enlargement can harm the organ. Vacuum pumps temporarily enlarge the penis by increasing blood flow but can cause damage and affect erection. Herbal lotions, though effective, may pose risks. Pills claiming size augmentation may not deliver results. Massaging with genuine medicated herbal oil seems safe and has shown positive outcomes in some men.",
       "Increasing the size of the penis through surgery can make a difference in size. It might have risk such as no sensation, uncomfortable sex etc. Surgery is also done to increase the girth by implanting silicone under the penis skin.",
+      "Increasing the size of the penis through surgery can make a difference in size. It might have risk such as no sensation, uncomfortable sex etc. Surgery is also done to increase the girth by implanting silicone under the penis skin",
     ],
     Lists: [
       [],
@@ -271,7 +273,13 @@ export const diseases = [
     ],
     Lists: [
       [],
-      [],
+      [
+        "Night fall is normal if the frequency is under control which may be two times a week.",
+        "Mental illness such as depression, stress etc can cause night fall.",
+        "Sedentary lifestyle leads to obesity and it accounts for nocturnal emission.",
+        "Hormonal changes may cause night fall.",
+        "Too much accumulation of the seminal fluid may result in night ejaculation.",
+      ],
       [],
       [],
       [],

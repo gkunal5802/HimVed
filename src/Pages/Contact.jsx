@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import Button from "../ui/Button";
-import Subtitle from "../ui/Subtitle";
-import Title from "../ui/Title";
 import ContactForm from "../components/Contact/ContactForm";
 import ContactLinks from "../components/Contact/ContactLinks";
 import Section from "../ui/Section";
-import { contactInfo } from "../data/constants";
+import Subtitle from "../ui/Subtitle";
+import Title from "../ui/Title";
 
 const SubHeading = styled.span`
   display: block;
@@ -14,19 +12,23 @@ const SubHeading = styled.span`
   margin-bottom: 2.5rem;
   color: #555;
   text-align: center;
+  align-self: center;
 `;
 
 const ContactMe = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 4.8rem;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
-const WriteMe = styled.div`
+const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 4.8rem;
-  margin-top: 2rem;
+  gap: 3.2rem;
   align-items: center;
   justify-content: center;
 `;
@@ -38,11 +40,14 @@ function Contact() {
       <Subtitle>Book an Appointment with Us</Subtitle>
 
       <ContactMe>
-        <ContactLinks />
-        <WriteMe>
+        <Container>
+          <SubHeading>Talk to Me</SubHeading>
+          <ContactLinks />
+        </Container>
+        <Container>
           <SubHeading>Write to Me</SubHeading>
           <ContactForm />
-        </WriteMe>
+        </Container>
       </ContactMe>
     </Section>
   );

@@ -39,10 +39,14 @@ const AccordionItem = styled.div`
 `;
 
 const Question = styled.span`
-  font-size: 18px;
+  font-size: 2rem;
   margin: 0px 18px;
   font-weight: 600;
   color: ${({ $active }) => ($active ? "green" : "black")};
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
 `;
 
 const Icon = styled.button`
@@ -59,9 +63,12 @@ const Content = styled.div`
 `;
 
 const Answer = styled.p`
-  font-size: 1.6rem;
+  font-size: 16px;
   margin: 0px 18px 28px 18px;
   color: black;
+  @media (max-width: 640px) {
+    font-size: 12px;
+  }
 `;
 
 function FAQ() {

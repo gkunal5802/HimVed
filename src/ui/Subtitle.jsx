@@ -1,8 +1,6 @@
-/*eslint-disable*/
-
 import styled from "styled-components";
 
-const StyledSubtitle = styled.h2`
+const Subtitle = styled.h2`
   font-size: 24px;
   text-align: center;
   max-width: 600px;
@@ -15,7 +13,4 @@ const StyledSubtitle = styled.h2`
   }
 `;
 
-function Subtitle({ children }) {
-  return <StyledSubtitle>{children}</StyledSubtitle>;
-}
 export default Subtitle;

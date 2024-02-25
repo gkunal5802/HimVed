@@ -18,22 +18,30 @@ const SocialMediaIcon = styled.a`
   &:hover {
     color: ${({ theme }) => theme.primary};
   }
+  @media (max-width: 640px) {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
 `;
 
 function SocialIcons() {
+  const styling = {
+    fontSize: "2.4rem",
+  };
+
   return (
     <SocialMediaIcons>
       <SocialMediaIcon href={Bio.twitter} target="display">
-        <TwitterIcon style={{ fontSize: "2.4rem" }} />
+        <TwitterIcon style={styling} />
       </SocialMediaIcon>
       <SocialMediaIcon href={Bio.linkedin} target="display">
-        <LinkedInIcon style={{ fontSize: "2.4rem" }} />
+        <LinkedInIcon style={styling} />
       </SocialMediaIcon>
       <SocialMediaIcon href={Bio.insta} target="display">
-        <InstagramIcon style={{ fontSize: "2.4rem" }} />
+        <InstagramIcon style={styling} />
       </SocialMediaIcon>
       <SocialMediaIcon href={Bio.github} target="display">
-        <GitHubIcon style={{ fontSize: "2.4rem" }} />
+        <GitHubIcon style={styling} />
       </SocialMediaIcon>
     </SocialMediaIcons>
   );

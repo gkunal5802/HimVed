@@ -1,7 +1,6 @@
-/*eslint-disable */
-
 import styled from "styled-components";
-const StyledWrapper = styled.div`
+
+const Wrapper = styled.div`
   background: hsla(147, 32%, 88%, 1);
 
   background: linear-gradient(
@@ -26,9 +25,5 @@ const StyledWrapper = styled.div`
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
-
-function Wrapper({ children }) {
-  return <StyledWrapper>{children}</StyledWrapper>;
-}
 
 export default Wrapper;

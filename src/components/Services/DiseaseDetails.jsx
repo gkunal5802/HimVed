@@ -45,6 +45,10 @@ const List = styled.ul`
   list-style: square;
   font-size: 1.8rem;
   margin: 8px 0px 14px 26px;
+  @media (max-width: 640px) {
+    font-size: 1.2rem;
+    line-height: 1.1;
+  }
 `;
 
 const StyledListItem = styled.li`
@@ -72,7 +76,7 @@ const DiseaseDetails = ({ openModal, setOpenModal }) => {
               padding: "5px",
               fontSize: "36px",
               top: "10px",
-              right: "-200px",
+              right: "10px",
               cursor: "pointer",
             }}
             onClick={() => setOpenModal({ state: false, project: null })}

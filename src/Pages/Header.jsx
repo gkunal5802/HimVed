@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Logo from "../components/Header/Logo";
 import MobileMenuBar from "../components/Header/MobileMenu";
 import Navbar from "../components/Header/Navbar";
-
+import { AiOutlineClose } from "react-icons/ai";
 const Nav = styled.div`
   background-color: rgb(217, 232, 204);
   font-size: 1.5rem;
@@ -38,11 +38,11 @@ const MobileIcon = styled.div`
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 5px;
+    right: 5px;
     transform: translate(-100%, 50%);
-    color: ${({ theme }) => theme.text_primary};
-    font-size: 1.5rem;
+    transition: all 0.3s ease-in;
+    color: #222;
     cursor: pointer;
   }
 `;
@@ -56,11 +56,19 @@ function Header() {
         <Logo />
 
         <MobileIcon>
-          <FaBars
-            onClick={() => {
-              setIsOpen(!isopen);
-            }}
-          />
+          {isopen ? (
+            <AiOutlineClose
+              style={{ fontSize: "26px", fontWeight: "bold" }}
+              onClick={(open) => setIsOpen(!open)}
+            />
+          ) : (
+            <FaBars
+              style={{ fontSize: "26px" }}
+              onClick={() => {
+                setIsOpen(!isopen);
+              }}
+            />
+          )}
         </MobileIcon>
 
         <Navbar />

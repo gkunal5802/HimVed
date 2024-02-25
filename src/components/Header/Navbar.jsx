@@ -1,7 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Button from "../../ui/Button";
+import NavButton from "../../ui/NavButton";
+import NavLink from "../../ui/NavLink";
 
 const NavItems = styled.ul`
   display: flex;
@@ -16,17 +15,6 @@ const NavItems = styled.ul`
   }
 `;
 
-const NavLink = styled.a`
-  font-weight: 500;
-  cursor: pointer;
-  color: ${({ theme }) => theme.text_primary};
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    color: ${({ theme }) => theme.primary};
-  }
-`;
-
 function Navbar() {
   return (
     <NavItems>
@@ -34,9 +22,9 @@ function Navbar() {
       <NavLink href="#explore">Explore</NavLink>
       <NavLink href="#services">Services</NavLink>
       <NavLink href="#faq">FAQ</NavLink>
-      <Button variation="primary">
-        <NavLink href="#contact">Contact</NavLink>
-      </Button>
+      <NavButton href="#contact" style={{ color: "#fff" }}>
+        Contact
+      </NavButton>
     </NavItems>
   );
 }

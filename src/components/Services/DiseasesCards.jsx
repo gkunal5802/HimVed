@@ -10,6 +10,10 @@ const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 4.2rem;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 function DiseasesCards({ openModal, setOpenModal }) {

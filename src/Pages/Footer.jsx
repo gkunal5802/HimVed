@@ -23,6 +23,9 @@ const Logo = styled.h1`
   font-weight: 600;
   font-size: 3.2rem;
   color: ${({ theme }) => theme.primary};
+  @media (max-width: 640px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const Copyright = styled.p`
@@ -36,9 +39,9 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>HimVeda</Logo>
+        <Logo>HimVed</Logo>
         <SocialIcons />
-        <Copyright>&copy; HimVeda. All rights reserved.</Copyright>
+        <Copyright>&copy; HimVed. All rights reserved.</Copyright>
       </FooterWrapper>
     </FooterContainer>
   );
