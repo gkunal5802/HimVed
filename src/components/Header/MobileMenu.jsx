@@ -58,12 +58,12 @@ function MobileMenuBar({ isopen, setIsOpen }) {
         Disease
       </MobileLink>
       <MobileLink
-        href="#why-us"
+        href="#explore"
         onClick={() => {
           setIsOpen(!isopen);
         }}
       >
-        Why Us
+        Explore
       </MobileLink>
       <MobileLink
         href="#faq"
