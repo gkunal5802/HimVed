@@ -11,6 +11,9 @@ const CardContainer = styled.div`
   align-items: center;
   gap: 4.2rem;
 
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
   }
