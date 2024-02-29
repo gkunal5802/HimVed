@@ -27,7 +27,7 @@ function Logo() {
   return (
     <NavLogo>
       <a
-        href="#about"
+        href="#"
         style={{
           display: "flex",
           alignItems: "center",

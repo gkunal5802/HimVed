@@ -18,7 +18,8 @@ const ContactLinkBox = styled.div`
     width: 120%;
   }
   @media (max-width: 640px) {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
   }
 `;
 
@@ -35,19 +36,33 @@ const StyledContactLink = styled.p`
   font-weight: bold;
   grid-column: span 2;
   justify-self: center;
+  overflow-wrap: anywhere;
+  text-align: center;
 `;
 
+const Container = styled.a`
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease-in;
+  &:hover {
+    transform: scale(0.9);
+  }
+`;
 function ContactLink({ info }) {
   return (
-    <ContactLinkBox>
-      <Type>
-        <info.icon style={{ fontSize: "2.4rem" }} />
-        {info.type}
-      </Type>
-      <StyledContactLink target={info?.target} href={info.link}>
-        {info.name}
-      </StyledContactLink>
-    </ContactLinkBox>
+    <Container
+      target="_blank"
+      href={info.link}
+      // style={{ textDecoration: "none", color: "inherit" }}
+    >
+      <ContactLinkBox>
+        <Type>
+          <info.icon style={{ fontSize: "2.4rem" }} />
+          {info.type}
+        </Type>
+        <StyledContactLink>{info.name}</StyledContactLink>
+      </ContactLinkBox>
+    </Container>
   );
 }
 

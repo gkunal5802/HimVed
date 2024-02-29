@@ -37,7 +37,7 @@ const Copyright = styled.p`
 
 function Footer() {
   return (
-    <FooterContainer>
+    <FooterContainer id="footer">
       <FooterWrapper>
         <Logo>HimVed</Logo>
         <SocialIcons />

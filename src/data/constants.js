@@ -1,50 +1,85 @@
-import Nightfall from "../images/Diseases/Nightfall.jpg";
-import Ejaculation from "../images/Diseases/Ejaculation.jpg";
-import Penis_Enlargement from "../images/Diseases/Penis_Enlargement.jpg";
-import Male_Infertility from "../images/Diseases/Male_Infertility.jpg";
-import Sex_Specialist from "../images/Diseases/Sex_Specialist.jpg";
-import Erectile_Dysfunction from "../images/Diseases/Erectile_Dysfunction.jpg";
+import {
+  Facebook,
+  PhoneInTalk,
+  Instagram,
+  Twitter,
+  WhatsApp,
+  Mail,
+} from "@mui/icons-material";
+
 import Consultation from "../images/Consultation.jpg";
 import DietPlan from "../images/DietPlan.png";
+import Ejaculation from "../images/Diseases/Ejaculation.jpg";
+import Erectile_Dysfunction from "../images/Diseases/Erectile_Dysfunction.jpg";
+import Male_Infertility from "../images/Diseases/Male_Infertility.jpg";
+import Nightfall from "../images/Diseases/Nightfall.jpg";
+import Penis_Enlargement from "../images/Diseases/Penis_Enlargement.jpg";
+import Sex_Specialist from "../images/Diseases/Sex_Specialist.jpg";
+import TaglineImg1 from "../images/HeroSection/Customer1.jpg";
+import TaglineImg2 from "../images/HeroSection/Customer2.jpg";
+import TaglineImg3 from "../images/HeroSection/Customer3.jpg";
+import TaglineImg4 from "../images/HeroSection/Customer4.jpg";
+import TaglineImg5 from "../images/HeroSection/Customer5.jpg";
+import TaglineImg6 from "../images/HeroSection/Customer6.jpg";
 import Natural from "../images/Natural.jpg";
-import MailIcon from "@mui/icons-material/Mail";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { PhoneInTalk } from "@mui/icons-material";
+import HeroImg from "../images/HeroImg2.jpg";
 
-export const Bio = {
-  name: "Kunal Garg",
-  roles: ["Full Stack Developer", "Programmer"],
-  description:
-    "Being an IT student, I love to code. Being a philomath , I love to read books on personal finance, self-growth & psychology. Being a freelance graphic designer, I love to create. Being a tutor, I love to teach.",
-  github: "https://github.com/gkunal5802",
-  resume:
-    "https://drive.google.com/file/d/1oWF2S_30u62mlCUSQZ4Ascv_lW7HGLZc/view?usp=sharing",
-  linkedin: "https://www.linkedin.com/in/gkunal05",
-  twitter: "https://twitter.com/gkunal05",
-  insta: "https://www.instagram.com/gkunal05/",
-};
+export default HeroImg;
+
+export const Bio = [
+  {
+    name: "twitter",
+    link: "https://twitter.com/InfoHerbals",
+    icon: Twitter,
+  },
+  {
+    name: "instagram",
+    icon: Instagram,
+    link: "https://www.instagram.com/himvedayurveda?igsh=MWx2bXFvbzZoOXBhNA%3D%3D&utm_source=qr",
+  },
+  {
+    name: "facebook",
+    icon: Facebook,
+    link: "https://www.facebook.com/profile.php?id=61556642437420&mibextid=LQQJ4d",
+  },
+  { name: "Mail", icon: Mail, mail: "mailto:info@himvedherbals.com" },
+  {
+    name: "Whatsapp",
+    icon: WhatsApp,
+    link: "https://api.whatsapp.com/send/?phone=919667298331&text&type=phone_number&app_absent=0",
+  },
+];
+
+export const ImgArr = [
+  TaglineImg1,
+  TaglineImg2,
+  TaglineImg3,
+  TaglineImg4,
+  TaglineImg5,
+  TaglineImg6,
+];
 
 export const contactInfo = [
   {
     id: 1,
     type: "Mail",
-    name: "xyz@gmail.com",
-    link: "mailto:xyz@gmail.com",
-    icon: MailIcon,
+    name: "Info@himvedherbals.com",
+    link: "mailto:info@himvedherbals.com",
+    icon: Mail,
   },
   {
     id: 2,
     type: "Whatsapp",
-    name: "+91 9897XXXXXXX",
-    link: "https://google.com",
-    icon: WhatsAppIcon,
+    name: "+91 9667298331",
+    link: "https://api.whatsapp.com/send/?phone=919667298331&text&type=phone_number&app_absent=0",
+    icon: WhatsApp,
     target: "_blank",
   },
   {
     id: 3,
     type: "Call Us",
-    name: "+91 9897XXXXXXX",
-    link: "tel:+919897XXXXX",
+    name: "+91 9667298331",
+    link: "tel:+919667298331",
     icon: PhoneInTalk,
   },
 ];
@@ -70,7 +105,7 @@ export const ExploreInfo = [
     content: "Our treatments are absolutely Ayurvedic and safe",
   },
 ];
-export const formFields = ["name", "email", "phone number", "message"];
+export const formFields = ["name", "email", "phone_number", "message"];
 export const faqs = [
   {
     id: 1,

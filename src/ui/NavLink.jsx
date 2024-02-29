@@ -2,13 +2,13 @@
 
 import styled from "styled-components";
 const StyledNavLink = styled.a`
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   color: #222;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   &:hover {
-    color: ${({ theme }) => theme.primary};
+    color: #28834a;
   }
 `;
 

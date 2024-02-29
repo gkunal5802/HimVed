@@ -1,5 +1,7 @@
+import emailjs from "@emailjs/browser";
+import { Slide, Snackbar, SnackbarContent } from "@mui/material";
+import { useRef, useState } from "react";
 import styled from "styled-components";
-import { useRef } from "react";
 import { formFields } from "../../data/constants";
 
 const FormBox = styled.div`
@@ -68,7 +70,7 @@ const SubmitButton = styled.input`
   color: #222;
   font-size: 1.8rem;
   font-weight: 600;
-
+  cursor: pointer;
   @media (max-width: 425px) {
     width: 50%;
   }
@@ -76,9 +78,29 @@ const SubmitButton = styled.input`
 
 function ContactForm() {
   const form = useRef();
+  const [open, setOpen] = useState(false);
+
+  function handleClose() {
+    setOpen(false);
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
+    emailjs
+      .sendForm("service_8kallop", "template_9d0i2xe", form.current, {
+        publicKey: "VQxDZX-XH2GPeGrPz",
+      })
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response);
+          // console.log(form.current.name);
+          form.current.reset();
+          setOpen(true);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   }
   return (
     <FormBox>
@@ -100,6 +122,23 @@ function ContactForm() {
         ))}
 
         <SubmitButton type="submit" value="Send" />
+        <Snackbar
+          open={open}
+          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+          autoHideDuration={6000}
+          onClose={handleClose}
+          TransitionComponent={Slide}
+        >
+          <SnackbarContent
+            style={{
+              backgroundColor: "#28834a",
+              fontSize: 16,
+            }}
+            message={
+              <span id="client-snackbar">Message sent Successfully ✌️</span>
+            }
+          />
+        </Snackbar>
       </Form>
     </FormBox>
   );
